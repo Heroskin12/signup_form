@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>SignUp Form</title>
+</head>
+<body>
+    <div class="flex-container">
+        <section id="section_one">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Conveno Logo">
+                <h1>Cathumba</h1>
+            </div>
+            <div class="credit">
+                <p>Photo by Keith Misner</p>
+            </div>
+        </section>
+        <section id="section_two">
+            <div class="text">
+                <h2>What are you doing right now? Do you really have such a busy life that you can't spare a few seconds to help me out and sign-up to this site?</h2>
+                <h2>Do it <em>now</em>. </h2>
+            </div>
+            <div class="form">
+                <form action="" method="post" id="my_form">
+                    <legend>Let's do this!</legend>
+                    <fieldset>
+                        <div>
+                            <label for="first_name">FIRST NAME*</label>
+                            <input type="text" id="first_name" name="first_name" required pattern="[a-zA-Z0-9]+" placeholder="Enter first name...">
+                        </div>
+
+                        <div>
+                            <label for="last_name">LAST NAME*</label>
+                            <input type="text" id="last_name" name="last_name" required pattern="[a-zA-Z0-9]+" placeholder="Enter surname...">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div>
+                            <label for="email">EMAIL*</label>
+                            <input type="email" name="email" id="email" required placeholder="e.g. johndoe@gmail.com">
+                        </div>
+
+                        <div>
+                            <label for="phone">PHONE</label>
+                            <input type="tel" name="phone" id="phone" pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$" placeholder="e.g. +447076674829">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div>
+                            <label for="password">PASSWORD*</label>
+                            <input type="password" name="password" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder=" ">
+                            <p class="addit">Please use at least one capital and lowercase letter, as well as a number and symbol.</p>
+                        </div>
+
+                        <div>
+                            <label for="confirm">CONFIRM PASSWORD*</label>
+                            <input type="password" name="confirm" id="confirm" required placeholder=" ">
+                            <p class="errorMsg">Password does not match!</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="form_foot">
+                <button type="Submit" form="my_form">Create Account</button>
+                <p>Already have an account? <a href="#">Log In</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
